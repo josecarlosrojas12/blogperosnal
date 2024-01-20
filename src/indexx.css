@@ -1,0 +1,69 @@
+body {
+  background-color: rgb(59, 59, 59);
+}
+
+header {
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  justify-content: center;
+  background-color: blue;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 5px 5px black;
+}
+
+.img {
+  height: 100px;
+  width: 800px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  max-width: 100%;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  left: 50px;
+  top: 800px;
+}
+
+.inputs label {
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.inputs label input {
+  flex: 1;
+  height: 40px;
+  margin-left: 10px;
+  padding: 10px; /* Ajusté el padding para un mejor tamaño del input */
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Añadí un borde para visualizar mejor el input */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.img img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  max-width: 400px; /* Define un ancho máximo para evitar que la imagen sea demasiado grande */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  animation: rotate 5s linear infinite;
+}
+
+/* Agrega una media query para ajustar estilos en pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+  .img img {
+    max-width: 100%; /* Hace que la imagen ocupe todo el ancho disponible en pantallas pequeñas */
+  }
+}
